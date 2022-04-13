@@ -1,0 +1,5 @@
+CREATE DATABASE carDearlership;
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+grant all on carDearlership.* to 'user'@'localhost' identified by 'password';
+flush privileges;
+
