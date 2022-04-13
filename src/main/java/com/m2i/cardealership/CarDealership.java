@@ -11,6 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.JstlView;
 
 @SpringBootApplication
 public class CarDealership {
@@ -29,7 +32,6 @@ public class CarDealership {
                 JspPropertyGroup jspPropertyGroup = new JspPropertyGroup();
                 jspPropertyGroup.addUrlPattern("*.jsp");
                 jspPropertyGroup.setScriptingInvalid("true");
-                jspPropertyGroup.addIncludePrelude("/WEB-INF/jsp/jstlLib.jsp");
                 jspPropertyGroup.setTrimWhitespace("true");
                 jspPropertyGroup.setDefaultContentType("text/html");
                 JspPropertyGroupDescriptorImpl jspPropertyGroupDescriptor = new JspPropertyGroupDescriptorImpl(jspPropertyGroup);

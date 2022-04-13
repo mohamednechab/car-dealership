@@ -17,6 +17,7 @@ import javax.persistence.*;
 @Entity
 public class User {
     @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String fname;
     private String lname;
@@ -25,6 +26,6 @@ public class User {
     private String password;
     @OneToOne
     private Location location;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     private Role role;
 }

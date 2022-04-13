@@ -26,6 +26,8 @@ public class Car {
     private BigDecimal price;
     private int mileage;
     private String year;
+    private boolean isUnderRepair;
+    private boolean forSale;
     @OneToOne
     private Place place;
     @OneToMany
